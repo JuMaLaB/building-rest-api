@@ -4,13 +4,13 @@ Demo code for the course "Building a REST API with Python 3" on [Pluralsight](ht
 There's a commit for each module in the course, as well as a tag:
 
 
-- [Module 2: Getting Started](https://github.com/codesensei-courses/python_3_rest_api/releases/tag/project-start)
-- [Module 3: Creating a datamodel](https://github.com/codesensei-courses/python_3_rest_api/releases/tag/datamodel-start)
-- [Module 3 (end): Created database models, added .env](https://github.com/codesensei-courses/python_3_rest_api/releases/tag/datamodel-end)
-- [Module 4 (end): Api endpoints and unit tests](https://github.com/codesensei-courses/python_3_rest_api/releases/tag/api-end)
-- [Module 5: Exercise: Reading Content from the Filesystem](https://github.com/codesensei-courses/python_3_rest_api/releases/tag/files-start)
-- [Module 5: Exercise: Parsing Frontmatter](https://github.com/codesensei-courses/python_3_rest_api/releases/tag/files-parse)
-- [Module 5 (end): Fixed the final unit test](https://github.com/codesensei-courses/python_3_rest_api/releases/tag/course-end)
+- [Module 2: Getting Started](https://github.com/codesensei-courses/test/releases/tag/project-start)
+- [Module 3: Creating a datamodel](https://github.com/codesensei-courses/test/releases/tag/datamodel-start)
+- [Module 3 (end): Created database models, added .env](https://github.com/codesensei-courses/test/releases/tag/datamodel-end)
+- [Module 4 (end): Api endpoints and unit tests](https://github.com/codesensei-courses/test/releases/tag/api-end)
+- [Module 5: Exercise: Reading Content from the Filesystem](https://github.com/codesensei-courses/test/releases/tag/files-start)
+- [Module 5: Exercise: Parsing Frontmatter](https://github.com/codesensei-courses/test/releases/tag/files-parse)
+- [Module 5 (end): Fixed the final unit test](https://github.com/codesensei-courses/test/releases/tag/course-end)
 
 
 # Setup instructions
