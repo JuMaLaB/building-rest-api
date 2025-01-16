@@ -1,8 +1,7 @@
 import decimal
 from datetime import date
 
-from database import SessionLocal
-from sqlalchemy import ForeignKey, select
+from sqlalchemy import ForeignKey
 from sqlalchemy.orm import (
     DeclarativeBase,
     Mapped,
@@ -14,7 +13,7 @@ from sqlalchemy.orm import (
 Base: DeclarativeBase = declarative_base()
 
 
-class DBCategory(Base):
+class DBCategory(Base):  # type: ignore
     __tablename__ = "category"
 
     id: Mapped[int] = mapped_column(primary_key=True)
@@ -22,7 +21,7 @@ class DBCategory(Base):
     events: Mapped[list["DBEvent"]] = relationship(back_populates="category")
 
 
-class DBEvent(Base):
+class DBEvent(Base):  # type: ignore
     __tablename__ = "event"
 
     id: Mapped[int] = mapped_column(primary_key=True)
@@ -39,6 +38,7 @@ class DBEvent(Base):
             {self.category.name:10} {self.date} ${self.price}" """
 
 
+"""
 session = SessionLocal()
 events = session.execute(select(DBEvent)).scalars()
 print("\n".join(str(event) for event in events))
@@ -46,3 +46,4 @@ print("\n".join(str(event) for event in events))
 cats = session.execute(select(DBCategory)).scalars()
 # lazy query again
 print("\n".join(f"{cat.name}: {len(cat.events)}" for cat in cats))
+"""
