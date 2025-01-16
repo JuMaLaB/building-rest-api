@@ -1,12 +1,14 @@
 import decimal
 from datetime import date
 
+from globoticket.frontmatter import get_frontmatter
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import (
     DeclarativeBase,
     Mapped,
     declarative_base,
     mapped_column,
+    reconstructor,
     relationship,
 )
 
@@ -36,6 +38,13 @@ class DBEvent(Base):  # type: ignore
     """ def __str__(self):
         return f"{self.id}: {self.product_code:10}
             {self.category.name:10} {self.date} ${self.price}" """
+
+    @reconstructor  # method will be called each time sql aclchemy will read an object from db
+    def _get_frontmatter(self):
+        frontmatter = get_frontmatter(self.product_code)
+        for k, v in frontmatter.items():
+            if not hasattr(self, k):
+                setattr(self, k, v)
 
 
 """

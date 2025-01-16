@@ -15,3 +15,7 @@ class Event(BaseModel):
     price: decimal.Decimal
     # product_code: str
     # category_id: int
+    artist: str
+    name: str
+    content: str
+    image: str
